@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+body {
+    background-color: #248f8d;
+    /*Ele deixa as div dentro dele flexíveis*/
+    display: flex;
+    /*align-items alinha os itens verticalmente*/
+    align-items: center;
+    /*align-items alinha os itens horizontalmente*/
+    justify-content: center;
+    padding: 3em;
+}
+#calc {
+    /*largura do container que tem a calculadora dentro*/
+    width: 400px;
+    padding: 0.5em;
+    background-color: #c4c4c4 ;
+    color: #000;
+    /*Ele deixa as div dentro dele flexíveis*/
+    display: flex;
+    /*é o fluxo de como as caixas vão se comportar, no caso da calculador quero que se comporte com coluna*/
+    flex-direction: column;
+}
+
+#calc h3 {
+    font-size: .8em;
+    font-weight: 300;
+    color: #666;
+}
+
+#operations {
+    text-align: right;
+}
+
+#previous-operations,
+#current-operation {
+    /*A altura já predefinida na caixa*/
+    min-height: 1.6em;
+    /*Espaçamento interno*/
+    padding: 0.2em;
+    /*A quebra de linha ficará dentro da div, sem ela a quebra seria dentro da caixa*/
+    overflow-wrap: break-word;
+}
+#previous-operations {
+    color: #777;
+}
+#current-operation {
+    /*Tamanho da fonte*/
+    font-size: 3em;
+    /*Espessura da fonte*/
+    font-weight: 700;
+}
+#buttons-container {
+    /*layout estilo flex box*/
+    display: grid;
+    /*adiciona quantas colunas o site terá*/
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /*adiciona espaçamentos entre os butões*/
+    gap: 3px;
+    
+}
+#buttons-container button {
+    border: 1px solid transparent;
+    /*altura entre os butões*/
+    height: 4em;
+    /*tamanho da fonte*/
+    font-size: 1.2em;
+    background-color: #dbdbdb;
+    /*Muda o cursor*/
+    cursor: pointer;
+}
+#buttons-container .number {
+    background-color: #f3f3f3;
+}
+#buttons-container button:hover {
+    background-color: #bababa;
+    border-color: #999;
+}
+#buttons-container #equal-btn {
+    /*Ocupa o lugar de dois em um*/
+    grid-column: span 2;
+    background-color: #75a5CB;
+}
+#buttons-container #equal-btn:hover {
+    background-color: #3a91dB;
+}
+
